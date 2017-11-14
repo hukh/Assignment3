@@ -12,6 +12,12 @@ A provided simulator, found in `simulate_exploration.py`  allows the robot to mo
 - The environment is a finite sized rectangle. You can access the size with the `getLimits` command
 - The data comes from an environmental process which changes somewhat smoothly
 
+Although I made no attempt to hide the details of the environment, in order to have a realistic situation, your code is supposed to work without accessing some elements:
+
+- Avoid accessing the world image directly. Rather, get it one sample at a time through the moveTo(x,y) function
+- Try to keep the provided plotting commands the same, so we can compare results in a semi-standardized way
+- Although you can freely look at the image hurricanes.png that holds all the world information, avoid customizing your code too much for just this one world. Imagine that I could replace it with another image of calmer weather in the same patch of ocean, and your code should still reconstruct and find the maximum.
+
 ## Getting started:
 
 It's very simple to run the example code this time. From the top level of the Assignment3 folder:
